@@ -1,0 +1,7 @@
+node_modules/ 
+bower_components/ 
+dist/ 
+.tmp/ 
+.travis.yml
+.yo.rc.json
+.editorconfig

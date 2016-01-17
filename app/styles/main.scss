@@ -23,7 +23,7 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+ 
   margin-bottom: 10px;
 
   /* Make the masthead heading the same height as the navigation */
@@ -32,6 +32,9 @@ body {
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
+  }
+  .logo {
+    margin:16% 0;
   }
 }
 
@@ -64,6 +67,35 @@ body {
   p + h4 {
     margin-top: 28px;
   }
+}
+
+.redcircle {
+  height: 10px;
+  width: 10px;
+  background: red;
+  border-radius: 50%;
+}
+.btn-black {
+  background-color: black;
+  transition: background-color .1s ease-in;
+  &:hover {
+    background-color:#FFEB3B;
+    .white {
+      color:black;
+    }
+  }
+  .white {
+    color:white;
+  }
+}
+.scenarios {
+  text-align:left;
+  padding:20px;
+  display: inline-block;
+  border: #FFF 1px solid;
+  -webkit-box-shadow: 10px 11px 62px -21px black;
+  -moz-box-shadow: 10px 11px 62px -21px black;
+  box-shadow: 10px 11px 62px -21px black;
 }
 
 /* Responsive: Portrait tablets and up */

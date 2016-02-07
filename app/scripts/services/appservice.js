@@ -40,7 +40,7 @@ angular.module('donStephenApp')
         _.extend(options.headers, {
           'Content-Type': _contentTypeFormdata
         });
-      };
+      }
 
       $http(options)
         .then(function(result){

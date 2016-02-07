@@ -21,7 +21,7 @@ angular.module('donStephenApp')
     });
     $http({
       method: 'GET',
-      url: endpointUrl
+      url: endpointUrl + "projects/"
     }).then(function(result){
       console.log(result.data);
     });

@@ -8,7 +8,7 @@
  * Controller of the donStephenApp
  */
 angular.module('donStephenApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function (endpointUrl, $http) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -19,4 +19,11 @@ angular.module('donStephenApp')
     particlesJS.load('particles', 'images/particles.json', function() {
       console.log('callback - particles.js config loaded');
     });
+    $http({
+      method: 'GET',
+      url: endpointUrl
+    }).then(function(result){
+      console.log(result.data);
+    });
+
   });

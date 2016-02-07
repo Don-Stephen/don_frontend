@@ -4,37 +4,47 @@
       DON STEPHEN
     </h1>
       <div class="row">
-      <div class="col-lg-12">
-        
-        <table class="table left">
-          <h3>Project Features</h3>
-          <thead>
-            <tr class="row">
-              <th class="col-lg-3">Feature name</th>
-              <th class="col-lg-3">Description</th>
-              <th class="col-lg-1">Status</th>
-              <th class="col-lg-2">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="row">
-              <td class="col-lg-3">Feature 1</td>
-              <td class="col-lg-3">First feature for Don Stephen Project</td>
-              <td class="col-lg-1"><div class="circle redcircle">
-                
-              </div></td>
-              <td class="col-lg-2">
-              <a href="#" title="" class="btn btn-default btn-black"><i class="white fa fa-eye"></i></a>
-              <a href="#" title="" class="btn btn-default btn-black"><i class="white fa fa-refresh"></i></a>
-              <a href="#" title="" class="btn btn-default btn-black"><i class="white fa fa-github"></i></a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <div class="col-lg-12">
+          
+          <table class="table left">
+            <h3>Project Features</h3>
+            <thead>
+              <tr>
+                <th colspan="3" class="col-lg-3">Feature name</th>
+                <th colspan="3" class="col-lg-3">Description</th>
+                <th colspan="3" class="col-lg-1">Status</th>
+                <th colspan="3" class="col-lg-2">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="3" class="col-lg-3">Operator login</td>
+                <td colspan="3" class="col-lg-3">
+                  <ul>
+                    <li>As a Chimera user</li>
+                    <li>I want to be able to log into the system</li>
+                    <li>In order to operate with the tool</li>
+                  </ul>
+                </td>
+                <td colspan="3" class="col-lg-1"><div class="circle redcircle">
+                  
+                </div></td>
+                <td colspan="3" class="col-lg-2">
+                  <a href="#" title="" class="btn btn-default btn-black"><i class="white fa fa-eye"></i></a>
+                  <a href="#" title="" class="btn btn-default btn-black"><i class="white fa fa-refresh"></i></a>
+                  <a href="#" title="" class="btn btn-default btn-black"><i class="white fa fa-github"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
     <br>
-        <div class="col-lg-3 text-center">
+
+
+
+
+        <!--<div class="col-lg-3 text-center">
           <div class="scenarios">
             <h4>Scenario 1</h4>
             <hr>
@@ -62,7 +72,7 @@
           </div>
         </div>
       </div>
-    <!--<h1>New Feature</h1>
+   --<h1>New Feature</h1>
     <hr />
     <form class="form-horizontal new-feature-form">
         <div class="form-group">
@@ -125,4 +135,41 @@
     </form>   
     -->
   </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Scenario 1: <b><i>Successful login</i></b>  <i class="fa fa-compass pull-right"></i></div>
+          <div class="panel-body">
+            <b>Given: </b><p>I'm in the login page</p>
+            <b>When: </b><p>The user enters the name "Quimera" and password "3Head$"</p>
+            <b>Then: </b>
+              <p class="extra">The user is successfully logged in</p>
+              <p class="extra"><b>And</b> the server does not send the hash</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Scenario 1: <b><i>Unsuccessfull login</i></b>  <i class="fa fa-compass pull-right"></i></div>
+          <div class="panel-body">
+            <b>Given: </b><p>I'm in the login page</p>
+            <b>When: </b><p>The user enters name "Quimera" and an incorrect password</p>
+            <b>Then: </b>
+              <p class="extra">The user should see a message "El login o contraseña son incorrectos"</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Scenario 1: <b><i>Unsuccessful login without entering password</i></b>  <i class="fa fa-compass pull-right"></i></div>
+          <div class="panel-body">
+            <b>Given: </b><p>I'm in the login page</p>
+            <b>When: </b><p>The user enters name "Quimera" and no password</p>
+            <b>Then: </b>
+              <p class="extra">The user should see a message "Este campo es obligatorio"</p>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>

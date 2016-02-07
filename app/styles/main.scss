@@ -40,7 +40,11 @@ body {
 
 /* Custom page footer */
 .footer {
+  position:fixed;
+  width:100%;
+  bottom:0;
   padding-top: 19px;
+  padding-bottom: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
@@ -96,6 +100,9 @@ body {
   -webkit-box-shadow: 10px 11px 62px -21px black;
   -moz-box-shadow: 10px 11px 62px -21px black;
   box-shadow: 10px 11px 62px -21px black;
+}
+.extra {
+  padding-left:2em;
 }
 
 /* Responsive: Portrait tablets and up */

@@ -8,4 +8,4 @@
  * Constant in the donStephenApp.
  */
 angular.module('donStephenApp')
-  .constant('endpointUrl', "http://ec2-52-32-92-58.us-west-2.compute.amazonaws.com:8000/api/v1/");
+  .constant('endpointUrl', "http://ec2-52-36-77-180.us-west-2.compute.amazonaws.com:8000/api/v1/");

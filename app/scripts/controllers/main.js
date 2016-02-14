@@ -13,9 +13,8 @@ angular.module('donStephenApp')
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
-    ];
-        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-    console.log('???');
+    ];    
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
     particlesJS.load('particles', 'images/particles.json', function() {
       console.log('callback - particles.js config loaded');
     });

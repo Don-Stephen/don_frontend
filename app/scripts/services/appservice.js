@@ -44,7 +44,6 @@ angular.module('donStephenApp')
 
       $http(options)
         .then(function(result){
-          console.log(result.data);
         });
     };
 

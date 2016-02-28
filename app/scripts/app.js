@@ -36,7 +36,7 @@ angular
       })
       .when('/projects/new', {
         templateUrl: 'views/projects/new.html',
-        controller: 'ProjectsCtrl',
+        controller: 'NewProjectCtrl',
         controllerAs: 'projects'
       })
       .otherwise({

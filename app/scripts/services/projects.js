@@ -2,22 +2,49 @@
 
 /**
  * @ngdoc service
- * @name donStephenApp.Projects
+ * @name donStephenApp.ProjectsService
  * @description
- * # Projects
+ * # ProjectsService
  * Service in the donStephenApp.
  */
 angular.module('donStephenApp')
-  .service('Projects', function (AppService, $http, endpointUrl) {
+  .service('ProjectsService', function (AppService, $http, endpointUrl) {
     // AngularJS will instantiate a singleton by calling "new" on this function
     this.getProjects = function(){
-      $http({
+      return $http({
         method: 'GET',
         url: endpointUrl + 'projects/',
         headers: {}
-      }).then(function(result){
+      }).success(function(result){
         return result;
       });
     }
+
+    this.getLanguages = function(){
+      return $http({
+        method: 'GET',
+        url: endpointUrl + 'languageconfig/',
+        headers: {}
+      }).success(function(result){
+        return result;
+      }).error(function(error){
+        console.log('error', error);
+      });
+    }
+
+    this.addProject = function(data) {
+      return $http({
+        method: 'POST',
+        url: endpointUrl + 'projects/',
+        data: data
+      }).success(function(result){
+        console.log(result);
+        return result;
+      }).error(function(error){
+        console.log('error ADD', error);
+      });
+    }
+    console.log(this);
+    
 
   });

@@ -1,0 +1,29 @@
+
+
+<div class="">
+  <h4>Editing project: {{project.name}}</h4> with id: {{project.id}}
+</div>
+
+<form>
+  <label for="">Lenguaje seleccionado:</label>
+  <select ng-options="language as language.language for language in languages track by language.id" ng-model="languageSelected"></select>
+
+  <label for="">Nombre de projecto:</label>
+  <input type="text" name="name" ng-model="{{project.id}}">
+
+
+  <button class="btn btn-info" ng-click="clickAddNewFeature()">New Feature</button>
+  <div class="form-group" ng-if="isANewFeatureIncoming">
+
+    <label for="">Description</label>
+    <input type="text" ng-model="feature.description">
+    <label for="">In order to...</label>
+    <input type="text" ng-model="feature.finality">
+    <label for="">As...</label>
+    <input type="text" ng-model="feature.who">
+    <label for="">I want to...</label>
+    <input type="text" ng-model="feature.purpose">
+
+
+  </div>
+</form>

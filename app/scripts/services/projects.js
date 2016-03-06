@@ -44,7 +44,18 @@ angular.module('donStephenApp')
         console.log('error ADD', error);
       });
     }
+
+    this.getProject = function(id){
+      return $http({
+        method: 'GET',
+        url: endpointUrl + 'projects/' + id + '/',
+        headers: {}
+      }).success(function(result){
+        return result;
+      })
+    }
+
     console.log(this);
-    
+
 
   });

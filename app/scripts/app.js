@@ -29,6 +29,10 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+
+      //
+      // PROJECTS MODULE
+      //
       .when('/projects', {
         templateUrl: 'views/projects/list.html',
         controller: 'ProjectsCtrl',
@@ -39,6 +43,13 @@ angular
         controller: 'NewProjectCtrl',
         controllerAs: 'projects'
       })
+      .when('/projects/:id/edit', {
+        templateUrl: 'views/projects/edit.html',
+        controller: 'FeaturesCtrl',
+        controllerAs: 'features'
+      })
+
+
       .otherwise({
         redirectTo: '/'
       });

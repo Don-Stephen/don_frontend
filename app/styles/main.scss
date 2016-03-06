@@ -11,6 +11,10 @@ $ds-green: #45BA4F;
 $ds-red: #E8454D;
 $ds-blue: #29CAFF;
 
+.green {
+  color: $ds-green;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -33,7 +37,7 @@ body {
 
 /* Custom page header */
 .header {
- 
+
   margin-bottom: 10px;
 
   /* Make the masthead heading the same height as the navigation */

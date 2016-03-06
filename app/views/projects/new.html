@@ -1,5 +1,5 @@
 <h1>Add new Project</h1>
-<div class="form-group">
+<form class="form-group">
   <label for="name" class="col-sm-2 control-label">Name:</label>
   <div class="col-sm-10">
       <input type="text" class="form-control" ng-model="projectName" placeholder="Project name">
@@ -9,5 +9,15 @@
   </div>
   <select ng-options="language as language.language for language in languages track by language.id" ng-model="languageSelected"></select>
 
-  <button class="btn btn-info" ng-click="clickAddProject()">Add Project</button>
-</div>
+  <button class="btn btn-info" ng-click="clickAddProject()" ng-disabled="projectName <= 0">Add Project</button>
+  <span><i class="fa fa-spinner fa-spin" ng-if="isLoading"></i></span>
+  <span><i class="fa fa-check" ng-class="{
+    'green': isLoading != true
+  }" ng-if="isSuccess"></i></span>
+  <div ng-if="editUrl != null && !isLoading && isSuccess">
+    <p>
+      Project <b>{{projectName}}</b> has been successfully saved. Give it some <a href="{{editUrl}}" class="btn btn-success">New Features</a>!
+    </p>
+  </div>
+
+</form>

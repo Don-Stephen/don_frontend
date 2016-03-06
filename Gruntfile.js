@@ -6,7 +6,7 @@
 // 'test/spec/{,*/}*.js'
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
-
+var modRewrite = require('connect-modrewrite');
 module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
@@ -73,7 +73,13 @@ module.exports = function (grunt) {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
-        livereload: 35729
+        livereload: 35729,
+        // Modrewrite rule, connect.static(path) for each path in target's base
+        middleware: function (connect, options) {
+          var optBase = (typeof options.base === 'string') ? [options.base] : options.base;
+          return [require('connect-modrewrite')(['!(\\..+)$ / [L]'])].concat(
+            optBase.map(function(path){ return connect.static(path); }));
+        }
       },
       livereload: {
         options: {
@@ -224,7 +230,7 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
-    }, 
+    },
 
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
